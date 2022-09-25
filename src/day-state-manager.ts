@@ -7,7 +7,7 @@ export function getState(day: XDate, current: XDate, props: any) {
   let state = '';
 
   if ((context?.date ?? toMarkingFormat(current)) === toMarkingFormat(day)) {
-    state = 'selected';
+    state = 'disabled'; // disabilita il current day permanente
   } else if (isToday(day)) {
     state = 'today';
   } else if (disabledByDefault) {
